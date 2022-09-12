@@ -14,6 +14,10 @@ a:hover {
     color: #777DF2;
 }
 
+li {
+    list-style: none;
+}
+
 body {
     background: #DBDBDB;
 }
@@ -34,10 +38,6 @@ body {
     margin-left: 80px;
 }
 
-.navbar__li {
-    list-style: none;
-}
-
 .navbar__li i {
     padding-right: 15px;
 }
@@ -47,15 +47,16 @@ body {
 
 .main-contain {
     width: 95%;
-    height: 150vh;
+    height: 100vh;
     margin: auto;
     background: #777DF2;
     background: none;
+    
 }
 
 .main__hero {
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     margin: auto;
     background: #4E4AD9;
     display: flex;
@@ -81,20 +82,43 @@ body {
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .contain__box {
     width: 250px;
-    height: 300px;
-    background: #fff;
+    height: 310px;
+    margin: 0px 0px 10px ;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;   
+    border-radius: 10px;
+    position: relative;
+
 }
+
+.box__img {
+    width: 250px;
+    height: 190px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
 
 .box__img img {
     width: 150px;
+    height: 100%;
+    object-fit: contain;
+}
+
+.box__button {
+    display: flex;
+    gap: 15px;
 }
 
 button {
@@ -105,12 +129,13 @@ button {
     color: #4E4AD9;
     font-weight: 700;
     border-radius: 5px;
+
 }
 
 .box__description {
     width: 100%;
-    height: 100%;
-    padding: 10px;
+    height: 120px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,9 +143,52 @@ button {
     border-radius: 0px 0px 10px 10px;
     background: #4E4AD9;
     gap: 15px;
+    position: absolute;
+    top: 70px;
+    transition: all 300ms;
+    
 }
 
 span {
     color: #fff;
+    font-weight: 700;
 
+}
+
+
+.box__img:hover {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.contain__box:hover > .box__img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.contain__box:hover > .box__description {
+    top: 60%;
+    padding-bottom: 50px;
+}
+
+
+
+.footer {
+    width: 100%;
+    height: 20vh;
+    background: #F2F2F2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__list {
+    display: flex;
+    gap: 20px;
+
+}
+
+.copyright {
+    color: #4E4AD9;
+    font-weight: 600;
 }
