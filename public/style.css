@@ -14,6 +14,16 @@ a:hover {
     color: #777DF2;
 }
 
+
+hr {
+    width: 200px;
+    height: 5px;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+
 li {
     list-style: none;
 }
@@ -47,20 +57,24 @@ body {
 
 .main-contain {
     width: 95%;
-    height: 100vh;
+    height: auto;
     margin: auto;
     background: #777DF2;
     background: none;
-    
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main__hero {
     width: 100%;
-    height: 90vh;
+    height: auto;
     margin: auto;
+    padding-bottom: 15px;
     background: #4E4AD9;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     border-radius: 10px;
 }
 
@@ -84,6 +98,8 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+/*CONTENEDOR DEL PRODUCTO*/
 
 .contain__box {
     width: 250px;
@@ -132,6 +148,11 @@ button {
 
 }
 
+button:hover {
+    background: #777DF2;
+    color: #fff;
+}
+
 .box__description {
     width: 100%;
     height: 120px;
@@ -169,11 +190,12 @@ span {
     padding-bottom: 50px;
 }
 
-
+/*FOOTER*/
 
 .footer {
     width: 100%;
     height: 20vh;
+    margin-top: 20px;
     background: #F2F2F2;
     display: flex;
     flex-direction: column;
